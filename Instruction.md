@@ -1,3 +1,7 @@
+CabinetSecurity.ino is the program that you can upload to your ESP8266
+Blynk app folder contains image of application interface
+Circuit contains image of every state of the circuit
+
 # IoT-based-room-security-using-RFID-and-Blynk-app
 This is an IoT based room security using RFID and ESP8266 Wemos D1 R2 mini and Blynk app. Regardless of the UID, the ESP8266 will send UID scanned on the RFID reader to Blynk app using Blynk cloud
 
@@ -15,13 +19,13 @@ What you need is:
 Connect RFID reader to ESP8266 using jumper cable where the pin is
 RFID  | ESP8266 Wemos
 ------------------------
-SDA   | SS/ D8
-SCK   | SCK/ D5
-MOSI  | MOSI/ D7
-MISO  | MISO/ D6
-GND   | GND 
-VCC   | 3.3V
-RST   | D3
+SDA   to SS/ D8
+SCK   to SCK/ D5
+MOSI  to MOSI/ D7
+MISO  to MISO/ D6
+GND   to GND 
+VCC   to 3.3V
+RST   to D3
 
 RFID can communicate to ESP8266 in three different ways. Depending on that, 
 The MISO pin of RFID will act as Master In Slave Out (MOSI) if SPI interface is enabled, will act as Serial CLock (SCL) if I2C interface is enabled, and will act as serial data output (Tx) if UART is enabled
@@ -33,19 +37,19 @@ be sure to #include <MFRC522.h> too for the RFID made by https://github.com/migu
 Connect servo motor to ESP8266
 Servo             | ESP8266
 ---------------------
-VCC (Red)         | 5V
-GND (Dark brown)  | GND
-Signal (Yellow)   | any digital pin (D4 in my case)
+VCC (Red)         to 5V
+GND (Dark brown)  to GND
+Signal (Yellow)   to any digital pin (D4 in my case)
 
 Be sure to #include <servo.h> to allow ESP8266 to control the servo motor
 
 Connect LCD with I2C to ESP8266
 I2C    | ESP8266
 ------------------
-VCC    | 5V
-GND    | GND
-SCL    | SCL
-SDA    | SDA
+VCC    to 5V
+GND    to GND
+SCL    to SCL
+SDA    to SDA
 
 Be sure to #include <LiquidCrystal_I2C.h> in order to print messages on the LCD using I2C interface
 
