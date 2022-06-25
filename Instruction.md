@@ -1,3 +1,5 @@
+Be sure to view this in raw
+
 CabinetSecurity.ino is the program that you can upload to your ESP8266
 Blynk app folder contains image of application interface
 Circuit contains image of every state of the circuit
